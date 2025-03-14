@@ -5,7 +5,13 @@ export default function ImageGallery({ items }) {
       <ul className={css.photoList}>
         {items.map((item) => (
           <li className={css.photoItem} key={item.id}>
-            <img className={css.img} src={item.urls.small} alt="" />
+            <img
+              className={css.img}
+              src={item.urls.small}
+              alt=""
+              width={250}
+              height={100}
+            />
           </li>
         ))}
       </ul>
