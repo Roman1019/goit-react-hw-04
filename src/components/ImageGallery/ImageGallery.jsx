@@ -1,4 +1,5 @@
 import css from "./ImageGallery.module.css";
+
 export default function ImageGallery({ items, onImageClick }) {
   return (
     <>

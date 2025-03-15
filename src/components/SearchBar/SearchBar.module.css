@@ -12,15 +12,16 @@
 
 .input {
   width: 300px;
-  height: 25px;
+  height: 30px;
   border: none;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  font-size: 16px;
 }
 
 .button {
   border: none;
-  height: 27px;
+  height: 32px;
   background: white;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;

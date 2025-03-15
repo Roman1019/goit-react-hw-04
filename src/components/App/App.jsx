@@ -3,7 +3,6 @@ import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import { fetchArticles } from "../../articleSearch.js";
-import "./App.css";
 import ImageGallery from "../ImageGallery/ImageGallery.jsx";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn.jsx";
 import ImageModal from "../ImageModal/ImageModal.jsx";

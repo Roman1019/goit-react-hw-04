@@ -11,20 +11,3 @@ export const fetchArticles = async (search, currentPage) => {
   });
   return response.data.results;
 };
-
-// export const fetchArticles = async (search) => {
-//   //   const response = await axios.get(
-//   //     `http://hn.algolia.com/api/v1/search?query=${topic}`
-//   //   );
-
-//   const response = await axios.get(
-//     `http://hn.algolia.com/api/v1/search?query=`,
-//     {
-//       params: {
-//         query: search,
-//       },
-//     }
-//   );
-
-//   return response.data.hits;
-// };

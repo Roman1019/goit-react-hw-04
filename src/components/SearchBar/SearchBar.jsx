@@ -25,11 +25,11 @@ export default function SearchBar({ onSearch }) {
             type="text"
             autoComplete="off"
             name="search"
-            //   autoFocus
-            //   placeholder="Search images and photos"
+            autoFocus
+            placeholder="Search images and photos"
           />
           <button className={css.button} type="submit">
-            <CiSearch />
+            <CiSearch size={20} />
           </button>
         </Form>
       </Formik>
