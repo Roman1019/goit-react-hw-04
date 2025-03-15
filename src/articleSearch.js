@@ -6,7 +6,7 @@ export const fetchArticles = async (search, currentPage) => {
       query: search,
       client_id: "Ewp05EUG89SyiK4LzjpwiPOBgXjxifFsUZCZAkufwuo",
       page: currentPage,
-      per_page: 10,
+      per_page: 12,
     },
   });
   return response.data.results;

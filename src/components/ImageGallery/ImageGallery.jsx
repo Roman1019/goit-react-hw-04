@@ -1,5 +1,5 @@
 import css from "./ImageGallery.module.css";
-export default function ImageGallery({ items }) {
+export default function ImageGallery({ items, onImageClick }) {
   return (
     <>
       <ul className={css.photoList}>
@@ -9,8 +9,9 @@ export default function ImageGallery({ items }) {
               className={css.img}
               src={item.urls.small}
               alt=""
-              width={250}
+              width={360}
               height={100}
+              onClick={() => onImageClick(item.urls.full)}
             />
           </li>
         ))}
