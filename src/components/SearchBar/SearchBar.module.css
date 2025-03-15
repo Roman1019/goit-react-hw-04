@@ -13,4 +13,15 @@
 .input {
   width: 300px;
   height: 25px;
+  border: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.button {
+  border: none;
+  height: 27px;
+  background: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }

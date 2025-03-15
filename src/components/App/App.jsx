@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import { fetchArticles } from "../../articleSearch.js";
 import "./App.css";
@@ -36,9 +37,14 @@ export default function App() {
         setError(false);
         setIsLoading(true);
         const data = await fetchArticles(searchTerm.split("/")[0], page);
-        setArticles((prevArticles) => {
-          return [...prevArticles, ...data];
-        });
+        if (data.length === 0) {
+          toast.error("No results found.");
+        } else {
+          setArticles((prevArticles) => {
+            return [...prevArticles, ...data];
+          });
+        }
+
         console.log(data);
       } catch {
         setError(true);
@@ -55,20 +61,19 @@ export default function App() {
 
       <Toaster position="top-right" />
 
-      {isLoading && <Loading />}
-
       {error && <b>Whops there was an error please reload...</b>}
 
       {articles.length !== 0 && (
         <ImageGallery items={articles} onImageClick={setSelectedImage} />
       )}
 
-      {articles.length > 0 && (
+      {articles.length > 0 && !isLoading && (
         <div>
           <LoadMoreBtn setPage={setPage} isLoading={isLoading} />
-          {isLoading && <Loading />}
         </div>
       )}
+
+      {isLoading && <Loading />}
 
       {selectedImage && (
         <ImageModal

@@ -1,4 +1,5 @@
 import { Field, Form, Formik } from "formik";
+import { CiSearch } from "react-icons/ci";
 import toast from "react-hot-toast";
 import css from "./SearchBar.module.css";
 export default function SearchBar({ onSearch }) {
@@ -27,7 +28,9 @@ export default function SearchBar({ onSearch }) {
             //   autoFocus
             //   placeholder="Search images and photos"
           />
-          <button type="submit">Search</button>
+          <button className={css.button} type="submit">
+            <CiSearch />
+          </button>
         </Form>
       </Formik>
     </header>
